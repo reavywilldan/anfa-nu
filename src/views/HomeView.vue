@@ -3,6 +3,16 @@
 
     <body>
       <HeaderComponent />
+        <Carousel>
+          <Slide v-for="slide in 10" :key="slide">
+            <div class="carousel__item">{{ slide }}</div>
+          </Slide>
+
+          <template #addons>
+            <Navigation />
+            <Pagination />
+          </template>
+        </Carousel>
       <HeroComponent />
 
       <main id="main">
@@ -12,21 +22,6 @@
             <div class="section-title">
               <h2>Tentang Kami</h2>
             </div>
-
-            <div class="row content">
-              <div class="col-lg-6 text-left">
-                <h1>MENGANGKAT STATUS SOSIAL EKONOMI MASYARAKAT</h1>
-              </div>
-              <div class="col-lg-6 pt-4 pt-lg-0 text-left">
-                <p>
-                  menjadi lembaga keuangan yang mandiri dan konsisten terhadap ketentuan syariah, memberi manfaat dan
-                  mampu
-                  mengangkat status sosial ekonomi masyarakat menuju kesejahteraan yang diridhoi Allah Taala
-                </p>
-                <a href="#" class="btn-learn-more">Learn More</a>
-              </div>
-            </div>
-
           </div>
         </section><!-- End About Us Section -->
       </main>
@@ -44,6 +39,8 @@ import HeaderComponent from '@/components/Header.vue'
 import FooterComponent from '@/components/Footer.vue'
 import HeroComponent from '@/components/Hero.vue'
 import ContactUsComponent from '@/components/ContactUs.vue'
+import 'vue3-carousel/dist/carousel.css'
+import { Carousel, Slide, Pagination, Navigation } from 'vue3-carousel'
 
 export default {
   name: 'HomeView',
@@ -51,7 +48,29 @@ export default {
     HeaderComponent,
     HeroComponent,
     FooterComponent,
-    ContactUsComponent
+    ContactUsComponent,
+    Carousel,
+    Slide,
+    Pagination,
+    Navigation,
   }
 }
 </script>
+
+<style>
+.carousel__item {
+  min-height: 200px;
+  width: 100%;
+  background-color: lightblue;
+  color: white;
+  font-size: 20px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.carousel__slide {
+  padding: 10px;
+}
+</style>
