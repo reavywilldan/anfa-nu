@@ -52,7 +52,7 @@
                         </div>
 
                     </div>
-                </section><!-- End About Us Section -->
+                </section>
             </main>
 
             <ContactUsComponent />

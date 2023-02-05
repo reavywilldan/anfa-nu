@@ -4,16 +4,14 @@
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-
-  <link rel="icon" href="<%= BASE_URL %>favicon.ico">
-  <title>ANFA NU</title>
+  <title>BMT ANFA NU</title>
 
   <meta content="" name="descriptison">
   <meta content="" name="keywords">
 
   <!-- Favicons -->
-  <link href="{{ asset('resources/assets/img/favicon.png') }}" rel="icon">
-  <link href="{{ asset('resources/assets/img/apple-touch-icon.png') }}" rel="apple-touch-icon">
+  <link href="{{ asset('img/logo-bmt-anfa-nu.png') }}" rel="icon">
+  <link href="{{ asset('img/logo-bmt-anfa-nu.png') }}" rel="apple-touch-icon">
 
   <!-- Google Fonts -->
   <link

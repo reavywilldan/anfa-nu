@@ -9,74 +9,20 @@
                     <div class="container">
                         <TitlePageComponent msg="Profil Perusahan" />
 
-                        <div class="row faq-item d-flex align-items-stretch">
+                        <div v-show="profile.length > 0" v-for="profile in profiles" :key="profile.name"
+                            class="row faq-item d-flex align-items-stretch">
                             <div class="col-lg-5">
-                                <h4>Nama Lembaga</h4>
+                                <i class="ri-check-double-fill"></i>
+                                <h4>{{ profile.name }}</h4>
                             </div>
                             <div class="col-lg-7">
                                 <p>
-                                    KSPPS BMT ANFA NU
+                                    {{ profile.value }}
                                 </p>
                             </div>
-                        </div><!-- End F.A.Q Item-->
-
-                        <div class="row faq-item d-flex align-items-stretch">
-                            <div class="col-lg-5">
-                                <h4>Alamat E-mail</h4>
-                            </div>
-                            <div class="col-lg-7">
-                                <p>
-                                    {{ config.email }}
-                                </p>
-                            </div>
-                        </div><!-- End F.A.Q Item-->
-
-                        <div class="row faq-item d-flex align-items-stretch">
-                            <div class="col-lg-5">
-                                <h4>Alamat</h4>
-                            </div>
-                            <div class="col-lg-7">
-                                <p>
-                                    {{ config.address.headquarters.address }}
-                                </p>
-                            </div>
-                        </div><!-- End F.A.Q Item-->
-
-                        <div class="row faq-item d-flex align-items-stretch">
-                            <div class="col-lg-5">
-                                <h4>Kegiatan usaha</h4>
-                            </div>
-                            <div class="col-lg-7">
-                                <p>
-                                    Bergerak dibidang Koperasi Simpan Pinjam dan Pembiayaan Syariah sesuai Anggaran
-                                    Dasar
-                                </p>
-                            </div>
-                        </div><!-- End F.A.Q Item-->
-
-                        <div class="row faq-item d-flex align-items-stretch">
-                            <div class="col-lg-5">
-                                <h4>No Telp/Fax</h4>
-                            </div>
-                            <div class="col-lg-7">
-                                <p>
-                                    {{ config.phone }}
-                                </p>
-                            </div>
-                        </div><!-- End F.A.Q Item-->
-
-                        <div class="row faq-item d-flex align-items-stretch">
-                            <div class="col-lg-5">
-                                <h4>Segmen Usaha Pembiayaan</h4>
-                            </div>
-                            <div class="col-lg-7">
-                                <p>
-                                    Bisnis UKM/UMKM dan Jual Beli
-                                </p>
-                            </div>
-                        </div><!-- End F.A.Q Item-->
+                        </div>
                     </div>
-                </section><!-- End About Us Section -->
+                </section>
             </main>
 
             <ContactUsComponent />
@@ -103,10 +49,13 @@ export default {
         TitlePageComponent,
         ContactUsComponent
     },
-    setup() {
+    data() {
         return {
-            config: config.config
+            profiles: []
         }
+    },
+    created() {
+        this.profiles = config.profile
     }
 }
 </script>

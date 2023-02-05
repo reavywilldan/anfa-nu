@@ -5,10 +5,12 @@
 </template>
 
 <script>
+
 export default {
     name: 'TitlePageComponent',
     props: {
         msg: String
     }
 }
+
 </script>

@@ -23,18 +23,17 @@
                   mampu
                   mengangkat status sosial ekonomi masyarakat menuju kesejahteraan yang diridhoi Allah Taala
                 </p>
-                <a href="#" class="btn-learn-more">Learn More</a>
+                <!-- <a href="#" class="btn-learn-more">Learn More</a> -->
               </div>
             </div>
 
-            <!-- ======= Counts Section ======= -->
             <section id="counts" class="counts">
               <div class="container">
 
                 <div class="row">
                   <div
                     class="image col-xl-5 d-flex align-items-stretch justify-content-center justify-content-xl-start">
-                    <img src="assets/img/counts-img.svg" alt="" class="img-fluid">
+                    <img src="/img/counts-img.svg" alt="" class="img-fluid">
                   </div>
 
                   <div class="col-xl-7 d-flex align-items-stretch pt-4 pt-xl-0">
@@ -76,14 +75,13 @@
                           </div>
                         </div>
                       </div>
-                    </div><!-- End .content-->
+                    </div>
                   </div>
                 </div>
 
               </div>
-            </section><!-- End Counts Section -->
+            </section>
 
-            <!-- ======= Services Section ======= -->
             <section id="services" class="services">
               <div class="container">
 
@@ -131,9 +129,8 @@
                 </div>
 
               </div>
-            </section><!-- End Services Section -->
+            </section>
 
-            <!-- ======= Testimonials Section ======= -->
             <section id="testimonials" class="testimonials">
               <div class="container">
 
@@ -145,7 +142,7 @@
                 <carousel :autoplay="2000" :items-to-show="2" :wrap-around="true">
                   <slide v-for="slide in 3" :key="slide">
                     <div class="testimonial-wrap">
-                      <div class="testimonial-item" style="background-image: url('assets/img/hero-img.png')">
+                      <div class="testimonial-item" style="background-image: url('/img/hero-img.png')">
                       </div>
                     </div>
                   </slide>
@@ -156,10 +153,10 @@
                 </carousel>
 
               </div>
-            </section><!-- End Testimonials Section -->
+            </section>
 
           </div>
-        </section><!-- End About Us Section -->
+        </section>
       </main>
 
       <ContactUsComponent />

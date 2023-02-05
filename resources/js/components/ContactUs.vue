@@ -1,5 +1,4 @@
 <template>
-    <!-- ======= Contact Section ======= -->
     <section id="contact" class="contact">
         <div class="container">
 
@@ -26,17 +25,17 @@
                     <div class="info">
                         <div>
                             <i class="ri-map-pin-line"></i>
-                            <p>{{ config.address.headquarters.address }}</p>
+                            <p>{{ contact.address }}</p>
                         </div>
 
                         <div>
                             <i class="ri-mail-send-line"></i>
-                            <p>{{ config.email }}</p>
+                            <p>{{ contact.email }}</p>
                         </div>
 
                         <div>
                             <i class="ri-phone-line"></i>
-                            <p>{{ config.address.headquarters.phone }}</p>
+                            <p>{{ contact.phone }}</p>
                         </div>
 
                     </div>
@@ -76,18 +75,22 @@
             </div>
 
         </div>
-    </section><!-- End Contact Section -->
+    </section>
 </template>
 
 <script>
+
 import config from '../../config'
 
 export default {
     name: 'ContactUsComponent',
-    setup() {
+    data() {
         return {
-            config: config.config
+            contact: []
         }
+    },
+    created() {
+        this.contact = config.basicInfo
     }
 }
 </script>

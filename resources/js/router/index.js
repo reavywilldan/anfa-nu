@@ -16,4 +16,9 @@ const router = createRouter({
 
 })
 
+router.beforeEach((to, from, next) => {
+  document.title = `BMT ANFA NU - ${to.name}`;
+  next();
+});
+
 export default router

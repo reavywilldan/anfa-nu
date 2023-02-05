@@ -5,68 +5,51 @@
             <HeaderComponent />
 
             <main id="main">
-                <section id="about" class="about">
+                <section id="news" class="news">
                     <div class="container">
 
                         <TitlePageComponent msg="Berita" />
 
-                        <section id="more-services" class="more-services">
-                            <div class="container">
-
-                                <div class="row">
-                                    <div class="col-md-6 d-flex align-items-stretch">
-                                        <div class="card"
-                                            style='background-image: url("assets/img/more-services-1.jpg");'>
-                                            <div class="card-body">
-                                                <h5 class="card-title"><a href="">Lobira Duno</a></h5>
-                                                <p class="card-text">Lorem ipsum dolor sit amet, consectetur elit, sed
-                                                    do eiusmod tempor ut labore et dolore magna aliqua.</p>
-                                                <div class="read-more"><a href="#"><i class="icofont-arrow-right"></i>
-                                                        Read More</a></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6 d-flex align-items-stretch mt-4 mt-md-0">
-                                        <div class="card"
-                                            style='background-image: url("assets/img/more-services-2.jpg");'>
-                                            <div class="card-body">
-                                                <h5 class="card-title"><a href="">Limere Radses</a></h5>
-                                                <p class="card-text">Sed ut perspiciatis unde omnis iste natus error sit
-                                                    voluptatem doloremque laudantium, totam rem.</p>
-                                                <div class="read-more"><a href="#"><i class="icofont-arrow-right"></i>
-                                                        Read More</a></div>
-                                            </div>
-                                        </div>
-
-                                    </div>
-                                    <div class="col-md-6 d-flex align-items-stretch mt-4">
-                                        <div class="card"
-                                            style='background-image: url("assets/img/more-services-3.jpg");'>
-                                            <div class="card-body">
-                                                <h5 class="card-title"><a href="">Nive Lodo</a></h5>
-                                                <p class="card-text">Nemo enim ipsam voluptatem quia voluptas sit aut
-                                                    odit aut fugit, sed quia magni dolores.</p>
-                                                <div class="read-more"><a href="#"><i class="icofont-arrow-right"></i>
-                                                        Read More</a></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6 d-flex align-items-stretch mt-4">
-                                        <div class="card"
-                                            style='background-image: url("assets/img/more-services-4.jpg");'>
-                                            <div class="card-body">
-                                                <h5 class="card-title"><a href="">Pale Treda</a></h5>
-                                                <p class="card-text">Nostrum eum sed et autem dolorum perspiciatis.
-                                                    Magni porro quisquam laudantium voluptatem.</p>
-                                                <div class="read-more"><a href="#"><i class="icofont-arrow-right"></i>
-                                                        Read More</a></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
+                        <!-- <div class="row content">
+                            <div class="col-lg-6 text-left">
+                                <h1>MENGANGKAT STATUS SOSIAL EKONOMI MASYARAKAT</h1>
                             </div>
-                        </section>
+                            <div class="col-lg-6 pt-4 pt-lg-0 text-left">
+                                <p>
+                                    Kendati menjadi sentra industri tembaga, Kondisi warga Dukuh Tumang stagnan selama
+                                    beberapa dekade. Permodalan yang terhenti membuat pergerakan bisnis di dukuh itu
+                                    seolah hanya berjalan ditempat. Lembaga perekonomian yang ada kala itu enggan
+                                    percaya kepada pengrajin di dukuh Tumang. Mereka dianggap tak mampu menerima
+                                    pembiayaan dari Bank. Itulah cikal bakal dar cita-cita pendirian BMT TUMANG.
+                                </p>
+
+                                <p>
+                                    Minimnya kepercayaan bank kepada warga Tumang pada saat itu membuat mereka akhirnya
+                                    menggantungkan modal pada rentenir. Hal itu pula yang juga membuat mereka pesimistis
+                                    terhadap Lembaga pembiayaan apapun. Disatu sisi, tangan penolong satu-satunya yakni
+                                    rentenir kian menjerat para pengrajin. Jangankan untung, pendapatan untuk balik
+                                    modalpun ludes untuk menutup cicilan kepada rentenir. Tak ada satupun Lembaga
+                                    keuangan yang berhasil menggaet warga untuk bergabung. Kalaupun mau bergabung,
+                                    mereka hanya akan meminjam tanpa bersedia untuk mengambalikan dana yang dipinjam.
+                                    Tidak berapa lama, koperasi satu demi satu tutup pintu. Mereka tak lagi melayani
+                                    kebutuhan permodalan masyarakat Tumang.
+                                </p>
+
+                                <p>
+                                    jeratan rentenir itulah, BMT TUMANG dilahirkan. Sosok piawai Adib bersama sejumlah
+                                    tokoh masyarakat mendorong BMT TUMANG lahir hingga tumbuh dan berkembang hingga
+                                    mempunyai beberapa kantor cabang. Kecintaan kepada Tumang menjadi landasan utama.
+                                    Selanjutnya, juga didorong keinginan masyarakat yang juga mau berubah serta wujud
+                                    dari pendampingan yang tak kenal putus.
+                                </p>
+
+                                <p>
+                                    Maret 2020, Kantor cabang KSPPS BMT TUMANG telah mencapai 24 kantor cabang yang
+                                    tersebar dibeberapa wilayah Provinsi, Jawa Tengah, Jawa Timur dan Daerah Istimewa
+                                    Yogyakarta.
+                                </p>
+                            </div>
+                        </div> -->
 
                     </div>
                 </section>
@@ -87,7 +70,7 @@ import TitlePageComponent from '@/components/TitlePage.vue'
 import ContactUsComponent from '@/components/ContactUs.vue'
 
 export default {
-    name: 'NewsView',
+    name: 'HomeView',
     components: {
         HeaderComponent,
         FooterComponent,
