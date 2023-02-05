@@ -41,13 +41,13 @@ export default {
 
         // Navigation active state on scroll
 
-
-        window.onload = function () {
-            const navMenu = document.querySelectorAll('.nav-menu')
-            console.log(navMenu)
-        }
-
         window.addEventListener('scroll', this.handleScroll)
+    },
+    mounted() {
+        this.$nextTick(() => {
+            console.log('jembut')
+            this.mobileMenu()
+        });
     },
     methods: {
         handleScroll() {
@@ -96,17 +96,35 @@ export default {
             } else {
                 header.classList.remove('header-scrolled')
             }
+
+            this.mobileMenu()
         },
         mobileMenu() {
-            const navMenu = document.querySelectorAll('.nav-menu')
-            const navMenuToggle = document.querySelectorAll('.mobile-nav, .mobile-nav-toggle')
+            if (document.querySelectorAll('.nav-menu').length > 0) {
+                const mobileNav = document.getElementsByClassName('nav-menu')[0].cloneNode(true)
+                mobileNav.classList.add('mobile-nav', 'd-lg-none')
 
-            console.log(navMenu)
+                document.getElementsByTagName('body')[0].appendChild(mobileNav)
+                document.getElementsByTagName('body')[0].insertAdjacentHTML('afterbegin', '<button type="button" class="mobile-nav-toggle d-lg-none"><i class="icofont-navigation-menu"></i></button>')
 
-            if (navMenu.length > 0) {
-                console.log('ha')
-            } else if (navMenuToggle.length > 0) {
-                console.log('hi')
+                const mobileNavOverly = document.createElement('div')
+                mobileNavOverly.classList.add('mobile-nav-overly')
+                mobileNavOverly.style.display = 'none'
+
+                document.getElementsByTagName('body')[0].appendChild(mobileNavOverly)
+
+                document.getElementsByClassName('mobile-nav-toggle')[0].addEventListener('click', (e) => {
+                    document.getElementsByTagName('body')[0].classList.toggle('mobile-nav-active')
+                    document.querySelectorAll('.mobile-nav-toggle i')[0].classList.toggle('icofont-navigation-menu', 'icofont-closee')
+                    if (document.getElementsByClassName('mobile-nav-overly')[0].style.display == 'none') {
+                        document.getElementsByClassName('mobile-nav-overly')[0].style.display = 'block'
+                    } else {
+                        document.getElementsByClassName('mobile-nav-overly')[0].style.display = 'none'
+                    }
+                })
+
+            } else if (document.querySelectorAll('.mobile-nav, .mobile-nav-toggle').length > 0) {
+
             }
         }
     }
