@@ -10,8 +10,18 @@
 
                 <div class="col-lg-4 col-md-6">
                     <div class="contact-about">
-                        <h3>BMT ANFA NU</h3>
-                        <p>Bersama KSPPS BMT ANFA NU berbekal syariah dan insyallah menuai barokah</p>
+                        <div class="row">
+                            <div class="col">
+                                <img src="/img/logo-bmt-anfanu-typho.png" alt="" width="200" height="100">
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col">
+                                <p>Bersama KSPPS BMT ANFA NU berbekal syariah dan insyallah menuai barokah</p>
+                            </div>
+                        </div>
+
                         <!-- <div class="social-links">
                             <a href="#" class="twitter"><i class="icofont-twitter"></i></a>
                             <a href="#" class="facebook"><i class="icofont-facebook"></i></a>
@@ -80,7 +90,7 @@
 
 <script>
 
-import config from '../../config'
+import config from '../../../config'
 
 export default {
     name: 'ContactUsComponent',

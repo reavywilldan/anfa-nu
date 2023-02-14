@@ -168,10 +168,10 @@
 
 <script>
 // @ is an alias to /src
-import HeaderComponent from '@/components/Header.vue'
-import FooterComponent from '@/components/Footer.vue'
-import HeroComponent from '@/components/Hero.vue'
-import ContactUsComponent from '@/components/ContactUs.vue'
+import HeaderComponent from '@/components/customer/Header.vue'
+import FooterComponent from '@/components/customer/Footer.vue'
+import HeroComponent from '@/components/customer/Hero.vue'
+import ContactUsComponent from '@/components/customer/ContactUs.vue'
 import 'vue3-carousel/dist/carousel.css'
 import { Carousel, Slide, Pagination, Navigation } from 'vue3-carousel'
 

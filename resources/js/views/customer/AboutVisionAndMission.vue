@@ -45,15 +45,14 @@
 
     </div>
 </template>
-
 <script>
 // @ is an alias to /src
-import HeaderComponent from '@/components/Header.vue'
-import FooterComponent from '@/components/Footer.vue'
-import TitlePageComponent from '@/components/TitlePage.vue'
-import ContactUsComponent from '@/components/ContactUs.vue'
+import HeaderComponent from '@/components/customer/Header.vue'
+import FooterComponent from '@/components/customer/Footer.vue'
+import TitlePageComponent from '@/components/customer/TitlePage.vue'
+import ContactUsComponent from '@/components/customer/ContactUs.vue'
 
-import config from '../../config'
+import config from '../../../config'
 
 export default {
     name: 'HomeView',

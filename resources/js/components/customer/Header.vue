@@ -3,8 +3,7 @@
         <div class="container d-flex align-items-center">
 
             <div class="logo mr-auto">
-                <a @click="$router.push('/')"><img src="/img/logo-bmt-anfa-nu.png" alt=""
-                        class="img-fluid"></a>
+                <a href="#/"><img src="/img/logo-bmt-anfanu-typho.png" alt="" class="img-fluid"></a>
             </div>
 
             <nav class="nav-menu d-none d-lg-block">
@@ -62,7 +61,7 @@
 </template>
 
 <script>
-import configProduct from '../../configProduct'
+import configProduct from '../../../configProduct'
 
 export default {
     name: 'HeaderComponent',

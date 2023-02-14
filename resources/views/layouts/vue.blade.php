@@ -10,8 +10,8 @@
   <meta content="" name="keywords">
 
   <!-- Favicons -->
-  <link href="{{ asset('img/logo-bmt-anfa-nu.png') }}" rel="icon">
-  <link href="{{ asset('img/logo-bmt-anfa-nu.png') }}" rel="apple-touch-icon">
+  <link href="{{ asset('img/logo-bmt-anfanu.png') }}" rel="icon">
+  <link href="{{ asset('img/logo-bmt-anfanu.png') }}" rel="apple-touch-icon">
 
   <!-- Google Fonts -->
   <link
