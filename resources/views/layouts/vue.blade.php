@@ -19,16 +19,16 @@
     rel="stylesheet">
 
   <!-- Vendor CSS Files -->
-  @vite('resources/assets/vendor/bootstrap/css/bootstrap.min.css')
-  @vite('resources/assets/vendor/icofont/icofont.min.css')
-  @vite('resources/assets/vendor/remixicon/remixicon.css')
-  @vite('resources/assets/vendor/boxicons/css/boxicons.min.css')
-  @vite('resources/assets/vendor/owl.carousel/assets/owl.carousel.min.css')
-  @vite('resources/assets/vendor/venobox/venobox.css')
-  @vite('resources/assets/vendor/aos/aos.css')
+  @vite('resources/js/customer/assets/vendor/bootstrap/css/bootstrap.min.css')
+  @vite('resources/js/customer/assets/vendor/icofont/icofont.min.css')
+  @vite('resources/js/customer/assets/vendor/remixicon/remixicon.css')
+  @vite('resources/js/customer/assets/vendor/boxicons/css/boxicons.min.css')
+  @vite('resources/js/customer/assets/vendor/owl.carousel/assets/owl.carousel.min.css')
+  @vite('resources/js/customer/assets/vendor/venobox/venobox.css')
+  @vite('resources/js/customer/assets/vendor/aos/aos.css')
 
   <!-- Template Main CSS File -->
-  @vite('resources/assets/css/style.css')
+  @vite('resources/js/customer/assets/css/style.css')
 </head>
 
 <body>

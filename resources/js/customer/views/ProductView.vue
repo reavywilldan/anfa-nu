@@ -53,10 +53,10 @@
 
 <script>
 // @ is an alias to /src
-import HeaderComponent from '@/components/customer/Header.vue'
-import FooterComponent from '@/components/customer/Footer.vue'
-import TitlePageComponent from '@/components/customer/TitlePage.vue'
-import ContactUsComponent from '@/components/customer/ContactUs.vue'
+import HeaderComponent from '@/customer/components/Header.vue'
+import FooterComponent from '@/customer/components/Footer.vue'
+import TitlePageComponent from '@/customer/components/TitlePage.vue'
+import ContactUsComponent from '@/customer/components/ContactUs.vue'
 
 import configProduct from '../../../configProduct'
 

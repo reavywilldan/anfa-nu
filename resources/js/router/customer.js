@@ -2,42 +2,42 @@ const routesCustomer = [
     {
         path: '/',
         name: 'Home',
-        component: () => import(/* webpackChunkName: "home" */ '../views/customer/HomeView.vue')
+        component: () => import(/* webpackChunkName: "home" */ '../customer/views/HomeView.vue')
     },
     {
         path: '/about',
         name: 'About',
-        component: () => import(/* webpackChunkName: "about" */ '../views/customer/AboutView.vue')
+        component: () => import(/* webpackChunkName: "about" */ '../customer/views/AboutView.vue')
     },
     {
         path: '/about-history',
         name: 'Sejarah',
-        component: () => import(/* webpackChunkName: "about" */ '../views/customer/AboutHistoryView.vue')
+        component: () => import(/* webpackChunkName: "about" */ '../customer/views/AboutHistoryView.vue')
     },
     {
         path: '/about-profile',
         name: 'Profil Perusahaan',
-        component: () => import(/* webpackChunkName: "about" */ '../views/customer/AboutProfileView.vue')
+        component: () => import(/* webpackChunkName: "about" */ '../customer/views/AboutProfileView.vue')
     },
     {
         path: '/about-vision-and-mission',
         name: 'Visi Dan Misi',
-        component: () => import(/* webpackChunkName: "about" */ '../views/customer/AboutVisionAndMission.vue')
+        component: () => import(/* webpackChunkName: "about" */ '../customer/views/AboutVisionAndMission.vue')
     },
     {
         path: '/about-organizational-structure',
         name: 'Struktur Organisasi',
-        component: () => import(/* webpackChunkName: "about" */ '../views/customer/AboutOrganizationalStructureView.vue')
+        component: () => import(/* webpackChunkName: "about" */ '../customer/views/AboutOrganizationalStructureView.vue')
     },
     {
         path: '/news',
         name: 'Berita',
-        component: () => import(/* webpackChunkName: "news" */ '../views/customer/NewsView.vue')
+        component: () => import(/* webpackChunkName: "news" */ '../customer/views/NewsView.vue')
     },
     {
         path: '/product/:product/:productChild?',
         name: 'Produk',
-        component: () => import(/* webpackChunkName: "product" */ '../views/customer/ProductView.vue')
+        component: () => import(/* webpackChunkName: "product" */ '../customer/views/ProductView.vue')
     }
 ]
 

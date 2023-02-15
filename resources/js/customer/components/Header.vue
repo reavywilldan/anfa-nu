@@ -61,6 +61,7 @@
 </template>
 
 <script>
+
 import configProduct from '../../../configProduct'
 
 export default {
