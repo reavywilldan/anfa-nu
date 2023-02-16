@@ -30,6 +30,11 @@ const routesCustomer = [
         component: () => import(/* webpackChunkName: "about" */ '../customer/views/AboutOrganizationalStructureView.vue')
     },
     {
+        path: '/contact',
+        name: 'Kontak',
+        component: () => import(/* webpackChunkName: "news" */ '../customer/views/ContactView.vue')
+    },
+    {
         path: '/news',
         name: 'Berita',
         component: () => import(/* webpackChunkName: "news" */ '../customer/views/NewsView.vue')

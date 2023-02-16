@@ -19,6 +19,19 @@ const basicInfo = {
     address: 'Jl. Alternatif Pucang Magelang, Kauman, Pucang, Secang, Kabupaten Magelang, Jawa Tengah 56195',
 }
 
+const office = [
+    {
+        name: 'BMT Anfa NU Pusat',
+        address: 'Jl. Alternatif Pucang Magelang, Kauman, Pucang, Secang, Kabupaten Magelang, Jawa Tengah 56195',
+        phone: '0813-2817-9519'
+    },
+    {
+        name: 'BMT Anfa NU Cabang Sekar Langit',
+        address: 'Jl. Sekar Langit Km 0.5 ( depan pasar hewan ) Grabag, Kabupaten Magelang, Jawa Tengah 56196',
+        phone: '0877-1918-6815'
+    }
+]
+
 const branchOffice = [
     {
         name: 'BMT Anfa NU Cabang Sekar Langit',
@@ -89,5 +102,6 @@ export default {
     basicInfo,
     profile,
     visionAndMission,
+    office,
     branchOffice
 }

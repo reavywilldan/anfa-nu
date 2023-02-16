@@ -1,4 +1,4 @@
-import { createRouter, createWebHashHistory } from 'vue-router'
+import { createRouter, createWebHashHistory, createWebHistory } from 'vue-router'
 
 import routesCustomer from './customer'
 const routeCustomer = routesCustomer.routesCustomer
@@ -8,7 +8,7 @@ const arrConcat = routeCustomer
 const routes = arrConcat
 
 const router = createRouter({
-  history: createWebHashHistory(),
+  history: createWebHistory(),
   routes,
   scrollBehavior() {
     document.getElementById('app').scrollIntoView({ behavior: 'smooth' });

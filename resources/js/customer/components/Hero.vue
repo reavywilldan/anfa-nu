@@ -10,7 +10,7 @@
                         Anggota, Karena Kami Yakin Bahwa Kenyamanan Anggota adalah Prioritas Utama Kami
                     </p>
                     <div>
-                        <a href="#/about-profile" class="btn-get-started scrollto">Get Started</a>
+                        <a href="/about-profile" class="btn-get-started scrollto">Profil</a>
                     </div>
                 </div>
                 <div class="col-lg-6 order-1 order-lg-2 hero-img">
