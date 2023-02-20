@@ -1,0 +1,136 @@
+{
+  "resources/js/app.css": {
+    "file": "assets/app-543f26ec.css",
+    "src": "resources/js/app.css"
+  },
+  "resources/js/customer/views/HomeView.css": {
+    "file": "assets/HomeView-d3524ff3.css",
+    "src": "resources/js/customer/views/HomeView.css"
+  },
+  "resources/sass/app.scss": {
+    "file": "assets/app-67dcdfd2.css",
+    "src": "resources/sass/app.scss",
+    "isEntry": true
+  },
+  "resources/js/customer/views/AboutView.vue": {
+    "file": "assets/AboutView-804cf846.js",
+    "src": "resources/js/customer/views/AboutView.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "resources/js/app.js"
+    ]
+  },
+  "_TitlePage-c2b9fb9a.js": {
+    "file": "assets/TitlePage-c2b9fb9a.js",
+    "imports": [
+      "resources/js/app.js"
+    ]
+  },
+  "resources/js/customer/views/AboutHistoryView.vue": {
+    "file": "assets/AboutHistoryView-7f037a3a.js",
+    "src": "resources/js/customer/views/AboutHistoryView.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "_ContactUs-dfb589e7.js",
+      "_TitlePage-c2b9fb9a.js",
+      "resources/js/app.js"
+    ]
+  },
+  "resources/js/customer/views/ContactView.vue": {
+    "file": "assets/ContactView-af4733de.js",
+    "src": "resources/js/customer/views/ContactView.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "_ContactUs-dfb589e7.js",
+      "_TitlePage-c2b9fb9a.js",
+      "resources/js/app.js"
+    ]
+  },
+  "resources/js/customer/views/AboutProfileView.vue": {
+    "file": "assets/AboutProfileView-75776253.js",
+    "src": "resources/js/customer/views/AboutProfileView.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "_ContactUs-dfb589e7.js",
+      "_TitlePage-c2b9fb9a.js",
+      "resources/js/app.js"
+    ]
+  },
+  "resources/js/customer/views/NewsView.vue": {
+    "file": "assets/NewsView-103a128f.js",
+    "src": "resources/js/customer/views/NewsView.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "_ContactUs-dfb589e7.js",
+      "_TitlePage-c2b9fb9a.js",
+      "resources/js/app.js"
+    ]
+  },
+  "resources/js/customer/views/AboutOrganizationalStructureView.vue": {
+    "file": "assets/AboutOrganizationalStructureView-4abd2d56.js",
+    "src": "resources/js/customer/views/AboutOrganizationalStructureView.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "_ContactUs-dfb589e7.js",
+      "_TitlePage-c2b9fb9a.js",
+      "resources/js/app.js"
+    ]
+  },
+  "resources/js/customer/views/AboutVisionAndMission.vue": {
+    "file": "assets/AboutVisionAndMission-20c876ee.js",
+    "src": "resources/js/customer/views/AboutVisionAndMission.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "_ContactUs-dfb589e7.js",
+      "_TitlePage-c2b9fb9a.js",
+      "resources/js/app.js"
+    ]
+  },
+  "_ContactUs-dfb589e7.js": {
+    "file": "assets/ContactUs-dfb589e7.js",
+    "imports": [
+      "resources/js/app.js"
+    ]
+  },
+  "resources/js/customer/views/ProductView.vue": {
+    "file": "assets/ProductView-ec10e386.js",
+    "src": "resources/js/customer/views/ProductView.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "_ContactUs-dfb589e7.js",
+      "_TitlePage-c2b9fb9a.js",
+      "resources/js/app.js"
+    ]
+  },
+  "resources/js/customer/views/HomeView.vue": {
+    "file": "assets/HomeView-ae281fb1.js",
+    "src": "resources/js/customer/views/HomeView.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "_ContactUs-dfb589e7.js",
+      "resources/js/app.js"
+    ],
+    "css": [
+      "assets/HomeView-d3524ff3.css"
+    ]
+  },
+  "resources/js/app.js": {
+    "file": "assets/app-9bdf65b3.js",
+    "src": "resources/js/app.js",
+    "isEntry": true,
+    "dynamicImports": [
+      "resources/js/customer/views/HomeView.vue",
+      "resources/js/customer/views/AboutView.vue",
+      "resources/js/customer/views/AboutHistoryView.vue",
+      "resources/js/customer/views/AboutProfileView.vue",
+      "resources/js/customer/views/AboutVisionAndMission.vue",
+      "resources/js/customer/views/AboutOrganizationalStructureView.vue",
+      "resources/js/customer/views/ContactView.vue",
+      "resources/js/customer/views/NewsView.vue",
+      "resources/js/customer/views/ProductView.vue"
+    ],
+    "css": [
+      "assets/app-543f26ec.css"
+    ]
+  }
+}
