@@ -32,12 +32,17 @@ const routesCustomer = [
     {
         path: '/contact',
         name: 'Kontak',
-        component: () => import(/* webpackChunkName: "news" */ '../customer/views/ContactView.vue')
+        component: () => import(/* webpackChunkName: "contact" */ '../customer/views/ContactView.vue')
     },
     {
         path: '/news',
         name: 'Berita',
         component: () => import(/* webpackChunkName: "news" */ '../customer/views/NewsView.vue')
+    },
+    {
+        path: '/news/:id/detail',
+        name: 'Detail Berita',
+        component: () => import(/* webpackChunkName: "news" */ '../customer/views/NewsDetail.vue')
     },
     {
         path: '/product/:product/:productChild?',

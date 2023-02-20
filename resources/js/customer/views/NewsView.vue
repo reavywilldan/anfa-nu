@@ -11,23 +11,25 @@
                         <TitlePageComponent msg="Berita" />
 
                         <div class="row">
-                            <div class="col-md-6 d-flex align-items-stretch mt-4" v-for="company in visibleCompanies"
-                                :key="company.id" :id="company.id">
+                            <div class="col-md-6 d-flex align-items-stretch mt-4" v-for="newsData in news"
+                                :key="newsData.id" :id="newsData.id">
                                 <div class="card" style='background-image: url("/img/more-services-1.jpg");'>
                                     <div class="card-body">
-                                        <h5 class="card-title"><a href="">Nive Lodo</a></h5>
-                                        <p class="card-text">Nemo enim ipsam voluptatem quia voluptas sit aut odit aut
-                                            fugit, sed quia magni dolores.</p>
-                                        <div class="read-more"><a href="#"><i class="icofont-arrow-right"></i> Read
-                                                More</a></div>
+                                        <h5 class="card-title"><a href="">{{ newsData.title }}</a></h5>
+                         
+                                        <div class="read-more">
+                                            <a href="/news/1/detail"><i class="icofont-arrow-right"></i>
+                                                Read More
+                                            </a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
 
                         <div class="text-center mt-5">
-                            <button @click="companiesVisible += step" v-if="companiesVisible < companies.length"
-                                type="button" class="btn text-white" style="background-color: #1d6c2f;">
+                            <button @click="loadDataFromServer" v-if="!noResult" type="button" class="btn text-white"
+                                style="background-color: #1d6c2f;">
                                 Load More
                             </button>
                         </div>
@@ -49,36 +51,46 @@ import FooterComponent from '@/customer/components/Footer.vue'
 import TitlePageComponent from '@/customer/components/TitlePage.vue'
 import ContactUsComponent from '@/customer/components/ContactUs.vue'
 
+import newsServices from '../../services/news'
+
+
 export default {
     name: 'HomeView',
     components: {
         HeaderComponent,
         FooterComponent,
         TitlePageComponent,
-        ContactUsComponent
+        ContactUsComponent,
     },
     data() {
         return {
-            companies: [
-                { id: 1, name: "Company A" },
-                { id: 2, name: "Company B" },
-                { id: 3, name: "Company C" },
-                { id: 4, name: "Company D" },
-                { id: 5, name: "Company E" },
-                { id: 6, name: "Company F" },
-                { id: 7, name: "Company G" },
-                { id: 8, name: "Company H" },
-                { id: 9, name: "Company I" },
-                { id: 10, name: "Company J" },
-            ],
-            companiesVisible: 4,
-            step: 4,
+            news: [],
+            page: 1,
+            noResult: false,
+            message: ""
         }
     },
-    computed: {
-        visibleCompanies() {
-            return this.companies.slice(0, this.companiesVisible)
-        }
+    methods: {
+        async loadDataFromServer() {
+            try {
+                const result = await newsServices.getNews(this.page)
+
+                if (result.data.length) {
+                    this.news.push(...result.data);
+                    this.page++;
+                } else {
+                    this.noResult = true;
+                    this.message = "No result found";
+                }
+            } catch (err) {
+                this.noResult = true;
+                this.message = "Error loading data";
+            }
+        },
+    },
+
+    async mounted() {
+        await this.loadDataFromServer()
     }
 }
 </script>

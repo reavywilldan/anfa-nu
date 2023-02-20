@@ -41,7 +41,7 @@
                     </li> -->
                     <li class="drop-down"><a>Berita dan Publikasi</a>
                         <ul>
-                            <li><a @click="$router.push('/news')">Berita</a></li>
+                            <li><a href="/news">Berita</a></li>
                             <li><a href="#">Promo</a></li>
                             <li><a href="#">Pengumuman</a></li>
                         </ul>
