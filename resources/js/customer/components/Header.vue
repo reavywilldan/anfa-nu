@@ -42,8 +42,8 @@
                     <li class="drop-down"><a>Berita dan Publikasi</a>
                         <ul>
                             <li><a href="/news">Berita</a></li>
-                            <li><a href="#">Promo</a></li>
-                            <li><a href="#">Pengumuman</a></li>
+                            <li><a href="/news-promotion">Berita Promo</a></li>
+                            <li><a href="/news-auction">Berita Lelang</a></li>
                         </ul>
                     </li>
                     <li class="drop-down"><a href="">Karir</a>

@@ -5,7 +5,6 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\News;
 
-
 class NewsController extends Controller
 {
     /**
@@ -14,9 +13,18 @@ class NewsController extends Controller
      * @return \Illuminate\Http\Response
      */
 
+    public function __construct()
+    {
+        $this->middleware('auth:sanctum')->except(['index', 'show']);
+    }
+
     public function index()
     {
-        $news = News::where('type', '=', 'news')->simplePaginate(2);
+        $news = News::select('id', 'username', 'title', 'created_at')->where('type', '=', 'news')
+            ->with('oldestNewsMedia')
+            ->orderBy('created_at', 'DESC')
+            ->simplePaginate(10);
+
         return $news;
     }
 
@@ -49,7 +57,16 @@ class NewsController extends Controller
      */
     public function show($id)
     {
-        $news = News::findOrFail($id);
+        $news = News::with('newsMedia')
+            ->with(['newsCategoryList' => function ($query) {
+                $query->join('news_category', 'news_category.id', '=', 'news_category_list.id_category')
+                    ->select([
+                        'news_category_list.*',
+                        'news_category.name'
+                    ]);
+            }])
+            ->findOrFail($id);
+
         return $news;
     }
 

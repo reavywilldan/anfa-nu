@@ -17,9 +17,13 @@
         "vue": "^3.2.36"
     },
     "dependencies": {
+        "@tiptap/pm": "^2.0.0-beta.220",
+        "@tiptap/starter-kit": "^2.0.0-beta.220",
+        "@tiptap/vue-3": "^2.0.0-beta.220",
         "vue-loader": "^17.0.1",
         "vue-router": "^4.1.6",
         "vue3-carousel": "^0.2.9",
-        "vuex": "^4.1.0"
+        "vuex": "^4.1.0",
+        "vuex-persistedstate": "^4.1.0"
     }
 }

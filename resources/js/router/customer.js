@@ -22,7 +22,7 @@ const routesCustomer = [
     {
         path: '/about-vision-and-mission',
         name: 'Visi Dan Misi',
-        component: () => import(/* webpackChunkName: "about" */ '../customer/views/AboutVisionAndMission.vue')
+        component: () => import(/* webpackChunkName: "about" */ '../customer/views/AboutVisionAndMissionView.vue')
     },
     {
         path: '/about-organizational-structure',
@@ -42,7 +42,27 @@ const routesCustomer = [
     {
         path: '/news/:id/detail',
         name: 'Detail Berita',
-        component: () => import(/* webpackChunkName: "news" */ '../customer/views/NewsDetail.vue')
+        component: () => import(/* webpackChunkName: "news" */ '../customer/views/NewsDetailView.vue')
+    },
+    {
+        path: '/news-auction',
+        name: 'Berita Lelang',
+        component: () => import(/* webpackChunkName: "news" */ '../customer/views/NewsAuctionView.vue')
+    },
+    {
+        path: '/news-auction/:id/detail',
+        name: 'Detail Berita Lelang',
+        component: () => import(/* webpackChunkName: "news" */ '../customer/views/NewsAuctionDetailView.vue')
+    },
+    {
+        path: '/news-promotion',
+        name: 'Berita Promo',
+        component: () => import(/* webpackChunkName: "news" */ '../customer/views/NewsPromotionView.vue')
+    },
+    {
+        path: '/news-promotion/:id/detail',
+        name: 'Detail Berita Promo',
+        component: () => import(/* webpackChunkName: "news" */ '../customer/views/NewsPromotionDetailView.vue')
     },
     {
         path: '/product/:product/:productChild?',

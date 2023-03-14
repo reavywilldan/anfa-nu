@@ -13,12 +13,18 @@
                         <div class="row">
                             <div class="col-md-6 d-flex align-items-stretch mt-4" v-for="newsData in news"
                                 :key="newsData.id" :id="newsData.id">
-                                <div class="card" style='background-image: url("/img/more-services-1.jpg");'>
+                                <div class="card"
+                                    v-bind:style="{ 'background-image': 'url(/img/news/' + newsData.oldest_news_media.name + ')' }">
                                     <div class="card-body">
-                                        <h5 class="card-title"><a href="">{{ newsData.title }}</a></h5>
-                         
+                                        <h5 class="card-title">
+                                            <a v-bind:href="'/news/' + newsData.id + '/detail'">
+                                                {{ newsData.title }}
+                                            </a>
+                                        </h5>
+
                                         <div class="read-more">
-                                            <a href="/news/1/detail"><i class="icofont-arrow-right"></i>
+                                            <a v-bind:href="'/news/' + newsData.id + '/detail'"><i
+                                                    class="icofont-arrow-right"></i>
                                                 Read More
                                             </a>
                                         </div>
@@ -55,7 +61,7 @@ import newsServices from '../../services/news'
 
 
 export default {
-    name: 'HomeView',
+    name: 'NewsView',
     components: {
         HeaderComponent,
         FooterComponent,
@@ -86,9 +92,8 @@ export default {
                 this.noResult = true;
                 this.message = "Error loading data";
             }
-        },
+        }
     },
-
     async mounted() {
         await this.loadDataFromServer()
     }

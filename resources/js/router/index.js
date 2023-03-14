@@ -1,9 +1,14 @@
 import { createRouter, createWebHashHistory, createWebHistory } from 'vue-router'
 
-import routesCustomer from './customer'
-const routeCustomer = routesCustomer.routesCustomer
+import store from '@/store'
 
-const arrConcat = routeCustomer
+import routesCustomer from './customer'
+import routesAdmin from './admin'
+
+const routeCustomer = routesCustomer.routesCustomer
+const routeAdmin = routesAdmin.routesAdmin
+
+const arrConcat = routeCustomer.concat(routeAdmin)
 
 const routes = arrConcat
 
@@ -11,14 +16,23 @@ const router = createRouter({
   history: createWebHistory(),
   routes,
   scrollBehavior() {
-    document.getElementById('app').scrollIntoView({ behavior: 'smooth' });
+    document.getElementById('app').scrollIntoView({ behavior: 'smooth' })
   }
 
 })
 
 router.beforeEach((to, from, next) => {
-  document.title = `BMT ANFA NU - ${to.name}`;
-  next();
-});
+  const fullPath = to.fullPath
+
+  if (fullPath.includes('admstr')) {
+    console.log('haha')
+    document.title = `${to.name}`
+    next()
+  } else {
+    console.log('hihihi')
+    document.title = `BMT ANFA NU - ${to.name}`
+    next()
+  }
+})
 
 export default router

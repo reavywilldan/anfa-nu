@@ -136,38 +136,6 @@ export default {
             let scrollY = window.scrollY
             let curPos = scrollY + 80
 
-            // Navigation active state on scroll
-            // navSection.forEach(function (item) {
-            //     let top = 0
-            //     let bottom = 0
-
-            //     if (!item.getClientRects().length) {
-            //         top = 0
-            //     } else {
-            //         let rect = item.getBoundingClientRect();
-            //         let win = item.ownerDocument.defaultView;
-
-            //         top = rect.top + win.pageYOffset
-
-            //         let styles = window.getComputedStyle(item)
-            //         let margin = parseFloat(styles['marginTop']) + parseFloat(styles['marginBottom'])
-
-            //         bottom = top + Math.ceil(item.offsetHeight + margin);
-            //     }
-
-            //     if (curPos >= top && curPos <= bottom) {
-            //         if (curPos <= bottom) {
-            //             Array.from(Array.from(mainNav).map(e => e.getElementsByTagName('li'))).forEach(e => [].forEach.call(e, function (el) {
-            //                 el.classList.remove("active");
-            //             }))
-            //         }
-
-            //         Array.from(Array.from(mainNav).map(e => e.getElementsByTagName('li'))).forEach(e => [].forEach.call(e, function (el) {
-            //             el.classList.remove("active");
-            //         }))
-            //     }
-            // })
-
             // Toggle .header-scrolled class to #header when page is scrolled
             if (scrollY > 100) {
                 header.classList.add('header-scrolled')
@@ -176,15 +144,6 @@ export default {
             }
         },
         mobileMenu() {
-            // Smooth scroll for the navigation menu and links with .scrollto classes
-            // const clickAMobileNav = document.querySelectorAll('.nav-menu a, .mobile-nav a, .scrollto')
-            // console.log(clickAMobileNav)
-            // for (const click of clickAMobileNav) {
-            //     click.addEventListener('click', function (event) {
-            //         console.log('hahha')
-            //     })
-            // }
-
             // Mobile Navigation
             if (document.querySelectorAll('.nav-menu').length > 0) {
                 const mobileNav = document.getElementsByClassName('nav-menu')[0].cloneNode(true)

@@ -10,11 +10,6 @@ const configProduct = [
                 path: 'simpanan-mudharabah',
                 content: [
                     {
-                        type: 'paragraph',
-                        title: 'Simpanan Mudharaba',
-                        value: ''
-                    },
-                    {
                         type: 'list',
                         title: 'Persyaratan',
                         value: [
@@ -62,11 +57,6 @@ const configProduct = [
                 name: 'Simpanan Berjangka / Deposito',
                 path: 'simpanan-berjangka-deposito',
                 content: [
-                    {
-                        type: 'paragraph',
-                        title: 'Simpanan Mudharaba',
-                        value: ''
-                    },
                     {
                         type: 'list',
                         title: 'Persyaratan',
@@ -116,11 +106,6 @@ const configProduct = [
                 path: 'simpanan-arisan-mudharabah',
                 content: [
                     {
-                        type: 'paragraph',
-                        title: 'Simpanan Mudharaba',
-                        value: ''
-                    },
-                    {
                         type: 'list',
                         title: 'Persyaratan',
                         value: [
@@ -169,11 +154,6 @@ const configProduct = [
                 path: 'simpanan-haji-mudharabah',
                 content: [
                     {
-                        type: 'paragraph',
-                        title: 'Simpanan Mudharaba',
-                        value: ''
-                    },
-                    {
                         type: 'list',
                         title: 'Persyaratan',
                         value: [
@@ -221,11 +201,6 @@ const configProduct = [
                 name: 'Simpanan Tarbiyah / Pendidikan',
                 path: 'simpanan-tarbiyah-pendidikan',
                 content: [
-                    {
-                        type: 'paragraph',
-                        title: 'Simpanan Mudharaba',
-                        value: ''
-                    },
                     {
                         type: 'list',
                         title: 'Persyaratan',
