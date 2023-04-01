@@ -141,7 +141,7 @@
                             </div>
                         </section> -->
 
-                        <section id="testimonials" class="testimonials">
+                        <section v-show="news.length > 0" id="testimonials" class="testimonials">
                             <div class="container">
 
                                 <div class="section-title">
