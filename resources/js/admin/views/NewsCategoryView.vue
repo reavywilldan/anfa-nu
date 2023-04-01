@@ -11,7 +11,8 @@
                             <div class="input-group">
                                 <span class="input-group-text text-body"><i class="fas fa-search"
                                         aria-hidden="true"></i></span>
-                                <input type="text" class="form-control" placeholder="Type here...">
+                                <input type="text" class="form-control" placeholder="Type here..." v-model="search"
+                                    @keyup="onKeyupLoadDataFromServer">
                             </div>
                         </div>
                     </div>
@@ -73,18 +74,18 @@
                                                 </td>
                                                 <td class="align-middle text-center">
                                                     <span class="text-secondary text-xs font-weight-bold">
-                                                        {{ newsCategoryData.created_at }}
+                                                        {{ formatDate(newsCategoryData.created_at) }}
                                                     </span>
                                                 </td>
                                                 <td class="align-middle">
                                                     <a v-bind:href="'/admstr/edit-category-news/' + newsCategoryData.id"
                                                         class="text-secondary font-weight-bold text-xs"
-                                                        data-toggle="tooltip" data-original-title="Edit user">
+                                                        data-toggle="tooltip" data-original-title="Edit category">
                                                         Edit
                                                     </a>
-                                                    <a v-bind:href="'/admstr/edit-category-news/' + newsCategoryData.id"
-                                                        class="text-secondary font-weight-bold text-xs"
-                                                        data-toggle="tooltip" data-original-title="Edit user">
+                                                    <a href="#" class="text-secondary font-weight-bold text-xs"
+                                                        data-toggle="tooltip" data-original-title="Delete category"
+                                                        :data-id="newsCategoryData.id" @click.prevent="onClickDelete">
                                                         Hapus
                                                     </a>
                                                 </td>
@@ -114,6 +115,8 @@ import store from '@/store'
 
 import newsCategoryServices from '../../services/newsCategory'
 
+import Swal from 'sweetalert2'
+
 export default {
     name: 'AdminNewsCategory',
     components: {
@@ -125,6 +128,7 @@ export default {
             user: store.state.auth.user,
             newsCategory: [],
             page: 1,
+            search: '',
             noResult: false,
             message: ""
         }
@@ -132,7 +136,12 @@ export default {
     methods: {
         async loadDataFromServer() {
             try {
-                const result = await newsCategoryServices.getNewsCategory(this.page)
+                const obj = {
+                    page: this.page,
+                    search: this.search
+                }
+
+                const result = await newsCategoryServices.getNewsCategory(obj)
 
                 if (result.data.length) {
                     this.newsCategory.push(...result.data);
@@ -145,6 +154,45 @@ export default {
                 this.noResult = true;
                 this.message = "Error loading data";
             }
+        },
+        async onKeyupLoadDataFromServer() {
+            try {
+                const obj = {
+                    page: 1,
+                    search: this.search
+                }
+
+                const result = await newsCategoryServices.getNewsCategory(obj)
+
+                if (result.data.length) {
+                    this.newsCategory = result.data
+                }
+            } catch (err) {
+                this.noResult = true;
+                this.message = "Error loading data";
+            }
+        },
+        async onClickDelete(e) {
+            try {
+                let self = this
+                const id = e.target.getAttribute('data-id')
+
+                Swal.fire({
+                    title: 'Apakah anda yakin',
+                    showCancelButton: true,
+                    confirmButtonText: 'Yes'
+                }).then((result) => {
+                    if (result.isConfirmed) {
+                        Swal.fire('Data berhasil dihapus!', '', 'success').then(async function () {
+                            const deleteData = await newsCategoryServices.deleteNewsCategoryById(id, self.user.bearer)
+
+                            if (deleteData.data) {
+                                location.reload()
+                            }
+                        })
+                    }
+                })
+            } catch (err) { }
         }
     },
     async mounted() {

@@ -45,6 +45,16 @@ const routesCustomer = [
         component: () => import(/* webpackChunkName: "news" */ '../customer/views/NewsDetailView.vue')
     },
     {
+        path: '/news-promotion',
+        name: 'Berita Promo',
+        component: () => import(/* webpackChunkName: "news" */ '../customer/views/NewsView.vue')
+    },
+    {
+        path: '/news/:id/detail',
+        name: 'Detail Berita Promo',
+        component: () => import(/* webpackChunkName: "news" */ '../customer/views/NewsDetailView.vue')
+    },
+    {
         path: '/news-auction',
         name: 'Berita Lelang',
         component: () => import(/* webpackChunkName: "news" */ '../customer/views/NewsAuctionView.vue')
@@ -68,6 +78,11 @@ const routesCustomer = [
         path: '/product/:product/:productChild?',
         name: 'Produk',
         component: () => import(/* webpackChunkName: "product" */ '../customer/views/ProductView.vue')
+    },
+    {
+        path: '/product-submission/:id?',
+        name: 'Pengajuan Produk',
+        component: () => import(/* webpackChunkName: "product" */ '../customer/views/ProductSubmissionView.vue')
     }
 ]
 

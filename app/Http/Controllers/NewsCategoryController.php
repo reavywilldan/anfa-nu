@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
+use Illuminate\Support\Collection;
 
 use App\Models\NewsCategory;
 
@@ -16,16 +17,34 @@ class NewsCategoryController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('auth:sanctum')->except(['index', 'show']);
+        $this->middleware('auth:sanctum')->except(['index', 'show', 'getAll']);
     }
 
-    public function index()
+    public function index(Request $request)
     {
-        $newsCategory = NewsCategory::select('id', 'name', 'created_at')
-            ->orderBy('created_at', 'DESC')
-            ->simplePaginate(10);
+        $search = $request->query('search');
 
-        return $newsCategory;
+        $newsCategory = NewsCategory::query();
+        $newsCategory->select('id', 'name', 'created_at');
+
+        if ($search) {
+            $newsCategory->where('name', 'like', '%' . $search . '%');
+        }
+
+        $newsCategory->orderBy('created_at', 'DESC');
+
+        return new Collection(
+            $newsCategory->simplePaginate(10)
+        );
+    }
+
+    public function getAll()
+    {
+        $newsCategory = NewsCategory::orderBy('name', 'ASC')->get();
+
+        return response()->json([
+            'data' => $newsCategory
+        ]);
     }
 
     /**
@@ -124,6 +143,16 @@ class NewsCategoryController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $newsCategory = NewsCategory::findOrFail($id);
+
+        if ($newsCategory->delete()) {
+            return response()->json([
+                'data' => 'success delete'
+            ]);
+        } else {
+            return response()->json([
+                'data' => 'failed delete'
+            ]);
+        }
     }
 }

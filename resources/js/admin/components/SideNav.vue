@@ -32,6 +32,112 @@
                         <span class="nav-link-text ms-1">Berita</span>
                     </a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link " href="/admstr/promotion">
+                        <div
+                            class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
+                            <i class="ni ni-bold-right text-dark text-sm opacity-10"></i>
+                        </div>
+                        <span class="nav-link-text ms-1">Promo</span>
+                    </a>
+                </li>
+
+                <li class="nav-item mt-3">
+                    <h6 class="ps-4 ms-2 text-uppercase text-xs font-weight-bolder opacity-6">Pengajuan</h6>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link " href="/admstr/product-submission/on_submit">
+                        <div
+                            class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
+                            <i class="ni ni-bold-right text-dark text-sm opacity-10"></i>
+                        </div>
+                        <span class="nav-link-text ms-1">Pengajuan Masuk</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link " href="/admstr/product-submission/on_review">
+                        <div
+                            class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
+                            <i class="ni ni-bold-right text-dark text-sm opacity-10"></i>
+                        </div>
+                        <span class="nav-link-text ms-1">Pengajuan Di Survei</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link " href="/admstr/product-submission/approved">
+                        <div
+                            class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
+                            <i class="ni ni-bold-right text-dark text-sm opacity-10"></i>
+                        </div>
+                        <span class="nav-link-text ms-1">Pengajuan Disetujui</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link " href="/admstr/product-submission/rejected">
+                        <div
+                            class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
+                            <i class="ni ni-bold-right text-dark text-sm opacity-10"></i>
+                        </div>
+                        <span class="nav-link-text ms-1">Pengajuan Ditolak</span>
+                    </a>
+                </li>
+
+                <li class="nav-item mt-3">
+                    <h6 class="ps-4 ms-2 text-uppercase text-xs font-weight-bolder opacity-6">Customer</h6>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link " href="/admstr/customer-list">
+                        <div
+                            class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
+                            <i class="ni ni-bold-right text-dark text-sm opacity-10"></i>
+                        </div>
+                        <span class="nav-link-text ms-1">List Customer</span>
+                    </a>
+                </li>
+
+                <li class="nav-item mt-3">
+                    <h6 class="ps-4 ms-2 text-uppercase text-xs font-weight-bolder opacity-6">User</h6>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link " href="/admstr/profile">
+                        <div
+                            class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
+                            <i class="ni ni-bold-right text-dark text-sm opacity-10"></i>
+                        </div>
+                        <span class="nav-link-text ms-1">Profil</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link " href="/admstr/profile-password">
+                        <div
+                            class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
+                            <i class="ni ni-bold-right text-dark text-sm opacity-10"></i>
+                        </div>
+                        <span class="nav-link-text ms-1">Profil Password</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link " href="/admstr/users">
+                        <div
+                            class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
+                            <i class="ni ni-bold-right text-dark text-sm opacity-10"></i>
+                        </div>
+                        <span class="nav-link-text ms-1">User</span>
+                    </a>
+                </li>
+
+                <li class="nav-item mt-3">
+                    <h6 class="ps-4 ms-2 text-uppercase text-xs font-weight-bolder opacity-6">Autentikasi</h6>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link " href="#" @click.prevent="logout">
+                        <div
+                            class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
+                            <i class="ni ni-bold-right text-dark text-sm opacity-10"></i>
+                        </div>
+                        <span class="nav-link-text ms-1">Logout</span>
+                    </a>
+                </li>
             </ul>
         </div>
     </aside>
@@ -39,8 +145,17 @@
 
 <script>
 // @ is an alias to /src
+import { mapActions } from 'vuex'
 
 export default {
-    name: 'SideNavComponent'
+    name: 'SideNavComponent',
+    methods: {
+        ...mapActions({
+            signOut: 'auth/logout'
+        }),
+        logout() {
+            this.signOut()
+        },
+    }
 }
 </script>

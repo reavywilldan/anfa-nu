@@ -41,6 +41,7 @@ export default {
         logout({ commit }) {
             commit('SET_USER', {})
             commit('SET_AUTHENTICATED', false)
+            router.push({ name: 'Admin - Login' })
         }
     }
 }

@@ -54,7 +54,7 @@ export default {
             profiles: []
         }
     },
-    created() {
+    mounted() {
         this.profiles = config.profile
     }
 }

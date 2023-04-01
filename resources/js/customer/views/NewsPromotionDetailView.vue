@@ -8,7 +8,7 @@
                 <section id="more-services" class="more-services">
                     <div class="container">
 
-                        <TitlePageComponent msg="Berita Promo" />
+                        <TitlePageComponent msg="Berita Promosi" />
 
                         <NewsDetailComponent :data="dataNews" />
                     </div>
@@ -34,7 +34,7 @@ import NewsDetailComponent from '@/customer/components/NewsDetail.vue'
 import newsPromotionServices from '../../services/newsPromotion'
 
 export default {
-    name: 'NewsPromotionDetailView',
+    name: 'NewsDetailView',
     components: {
         HeaderComponent,
         FooterComponent,

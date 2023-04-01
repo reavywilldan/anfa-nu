@@ -20,8 +20,13 @@ Vue.mixin({
             return _.chunk(arr, 2)
         },
         formatDate(date) {
-            let dates = new Date(date)
-            return dates.getFullYear() + '-' + (date.getMonth() + 1) + '-' + date.getDate();
+            let dateObject = new Date(date)
+
+            if (dateObject) {
+                return dateObject.getFullYear() + '-' + (dateObject.getMonth() + 1) + '-' + dateObject.getDate()
+            }
+
+            return ''
         }
     },
 })

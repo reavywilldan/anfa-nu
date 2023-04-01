@@ -67,7 +67,7 @@ export default {
             visionAndMission: []
         }
     },
-    created() {
+    mounted() {
         this.visionAndMission = config.visionAndMission
     }
 }

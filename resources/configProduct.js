@@ -254,6 +254,7 @@ const configProduct = [
         content: [],
         child: [
             {
+                id: 1,
                 name: 'Pembiayaan Modal Usaha',
                 path: 'pembiayaan-modal-usaha',
                 content: [
@@ -270,6 +271,7 @@ const configProduct = [
                 ],
             },
             {
+                id: 2,
                 name: 'Pembiayaan Kendaraan Bermotor',
                 path: 'pembiayaan-kendaraan-bermotor',
                 content: [
@@ -287,6 +289,7 @@ const configProduct = [
                 ],
             },
             {
+                id: 3,
                 name: 'Pembiayaan Rumah',
                 path: 'pembiayaan-rumah',
                 content: [
@@ -301,6 +304,7 @@ const configProduct = [
                 ],
             },
             {
+                id: 4,
                 name: 'Pembiayaan Multiguna',
                 path: 'pembiayaan-multiguna',
                 content: [

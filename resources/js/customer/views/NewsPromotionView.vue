@@ -8,22 +8,22 @@
                 <section id="more-services" class="more-services">
                     <div class="container">
 
-                        <TitlePageComponent msg="Berita Promo" />
+                        <TitlePageComponent msg="Berita Promosi" />
 
                         <div class="row">
                             <div class="col-md-6 d-flex align-items-stretch mt-4" v-for="newsData in news"
                                 :key="newsData.id" :id="newsData.id">
                                 <div class="card"
-                                    v-bind:style="{ 'background-image': 'url(/img/news/' + newsData.oldest_news_media.name + ')' }">
+                                    v-bind:style="{ 'background-image': 'url(/img/' + newsData.oldest_news_media.name + ')' }">
                                     <div class="card-body">
                                         <h5 class="card-title">
-                                            <a v-bind:href="'/news/' + newsData.id + '/detail'">
+                                            <a v-bind:href="'/news-promotion/' + newsData.id + '/detail'">
                                                 {{ newsData.title }}
                                             </a>
                                         </h5>
 
                                         <div class="read-more">
-                                            <a v-bind:href="'/news/' + newsData.id + '/detail'"><i
+                                            <a v-bind:href="'/news-promotion/' + newsData.id + '/detail'"><i
                                                     class="icofont-arrow-right"></i>
                                                 Read More
                                             </a>
@@ -79,7 +79,11 @@ export default {
     methods: {
         async loadDataFromServer() {
             try {
-                const result = await newsPromotionServices.getNews(this.page)
+                const obj = {
+                    page: this.page
+                }
+
+                const result = await newsPromotionServices.getNews(obj)
 
                 if (result.data.length) {
                     this.news.push(...result.data);
@@ -94,7 +98,6 @@ export default {
             }
         }
     },
-
     async mounted() {
         await this.loadDataFromServer()
     }

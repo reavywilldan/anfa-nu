@@ -33,10 +33,15 @@
                                         </div>
                                     </section>
                                 </div>
-                                <!-- <div class="panel">
-                                    <h1>{{ article.title }}</h1>
-                                    <p>{{ article.summary }}</p>
-                                </div> -->
+                            </div>
+                        </div>
+
+                        <div v-if="productFromRoute == 'pembiayaan'" class="container">
+                            <div class="col-md-12 text-center">
+                                <a v-bind:href="'/product-submission/' + configProduct.id" class="btn text-white"
+                                    style="background-color: #1d6c2f;">
+                                    Ajukan
+                                </a>
                             </div>
                         </div>
 

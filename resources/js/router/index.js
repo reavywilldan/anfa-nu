@@ -25,11 +25,9 @@ router.beforeEach((to, from, next) => {
   const fullPath = to.fullPath
 
   if (fullPath.includes('admstr')) {
-    console.log('haha')
     document.title = `${to.name}`
     next()
   } else {
-    console.log('hihihi')
     document.title = `BMT ANFA NU - ${to.name}`
     next()
   }

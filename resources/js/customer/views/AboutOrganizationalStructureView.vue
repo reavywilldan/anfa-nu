@@ -9,9 +9,7 @@
                     <div class="container">
 
                         <TitlePageComponent msg="Struktur Organisasi" />
-
-                        <div class="image-fluid">hha</div>
-
+                        <img class="img-fluid mw-100" src="/img/chart-bmt-anfa-nu.png">
                     </div>
                 </section>
             </main>

@@ -121,11 +121,15 @@ export default {
         await waitFor(1500)
         this.debug('mounted (after timeout)')
 
-        // mobile navigation handler
-        this.mobileMenu()
+        const currentUrl = window.location.href
 
-        // scroll handler
-        window.addEventListener('scroll', this.handleScroll)
+        if (!currentUrl.includes('admstr')) {
+            // mobile navigation handler
+            this.mobileMenu()
+
+            // scroll handler
+            window.addEventListener('scroll', this.handleScroll)
+        }
     },
     methods: {
         handleScroll() {

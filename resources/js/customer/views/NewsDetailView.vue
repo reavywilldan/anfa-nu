@@ -2,7 +2,7 @@
     <div class="home">
 
         <body>
-            <HeaderComponent /> 
+            <HeaderComponent />
 
             <main id="main">
                 <section id="more-services" class="more-services">

@@ -14,7 +14,7 @@
                             <div class="col-md-6 d-flex align-items-stretch mt-4" v-for="newsData in news"
                                 :key="newsData.id" :id="newsData.id">
                                 <div class="card"
-                                    v-bind:style="{ 'background-image': 'url(/img/news/' + newsData.oldest_news_media.name + ')' }">
+                                    v-bind:style="{ 'background-image': 'url(/img/' + newsData.oldest_news_media.name + ')' }">
                                     <div class="card-body">
                                         <h5 class="card-title">
                                             <a v-bind:href="'/news/' + newsData.id + '/detail'">
@@ -79,7 +79,11 @@ export default {
     methods: {
         async loadDataFromServer() {
             try {
-                const result = await newsServices.getNews(this.page)
+                const obj = {
+                    page: this.page
+                }
+
+                const result = await newsServices.getNews(obj)
 
                 if (result.data.length) {
                     this.news.push(...result.data);

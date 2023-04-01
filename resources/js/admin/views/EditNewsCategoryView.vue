@@ -22,7 +22,7 @@
                                                     Nama Kategori
                                                 </label>
                                                 <input class="form-control" name="name" id="name" type="text"
-                                                    v-model="nameCategory" required>
+                                                    v-model="dataNewsCategory.name" required>
                                             </div>
                                         </div>
                                     </div>
@@ -46,6 +46,8 @@ import store from '@/store'
 
 import newsCategoryServices from '../../services/newsCategory'
 
+import Swal from 'sweetalert2'
+
 export default {
     name: 'AdminEditNewsCategory',
     components: {
@@ -57,7 +59,6 @@ export default {
             user: store.state.auth.user,
             dataNewsCategory: {},
             idNewsCategory: 0,
-            nameCategory: '',
             messageError: ''
         }
     },
@@ -72,11 +73,19 @@ export default {
     },
     methods: {
         async editNewsCategory() {
-            const updateNewsCategory = await newsCategoryServices.updateNewsCategory({ id: this.idNewsCategory, name: this.nameCategory }, this.user.bearer)
-            if (updateNewsCategory.name) {
-                this.messageError = updateNewsCategory.name[0]
-            } else {
-                this.$router.push('/admstr/category-news')
+            const updateNewsCategory = await newsCategoryServices.updateNewsCategory({ id: this.idNewsCategory, name: this.dataNewsCategory.name }, this.user.bearer)
+
+            if (updateNewsCategory.data) {
+                let self = this
+
+                Swal.fire({
+                    title: 'Berhasil!',
+                    text: 'Kategori berita berhasil diubah.',
+                    icon: 'success'
+
+                }).then(function () {
+                    self.$router.push('/admstr/category-news')
+                })
             }
         },
         async getNewsCategoryById(id) {

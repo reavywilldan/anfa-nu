@@ -9,7 +9,7 @@
                         <slide v-for="slide in data.news_media" :key="slide.id">
                             <div class="bg-image hover-overlay shadow-1-strong ripple rounded-5 mb-4"
                                 data-mdb-ripple-color="light">
-                                <img v-bind:src="'/img/news/' + slide.name" class="img-fluid" />
+                                <img v-bind:src="'/img/' + slide.name" class="img-fluid" />
                                 <p class="text-left">* {{ slide.description }}</p>
                             </div>
                         </slide>
@@ -29,7 +29,7 @@
                         </div>
 
                         <div class="col-6 text-end">
-                            <u> {{ data.created_at }}</u>
+                            <u> {{ formatDate(data.created_at) }}</u>
                         </div>
                     </div>
 
@@ -48,7 +48,7 @@
                 <div class="row content">
                     <div class="col">
                         <h3>Kategori</h3>
-                        <ul v-show="data.news_category_list.length > 0">
+                        <ul v-show="data.news_category_list">
                             <li v-for="category in data.news_category_list">
                                 <i class="ri-check-double-line"></i>
                                 {{ category.name }}

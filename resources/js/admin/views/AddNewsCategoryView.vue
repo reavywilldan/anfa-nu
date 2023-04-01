@@ -47,6 +47,8 @@ import store from '@/store'
 
 import newsCategoryServices from '../../services/newsCategory'
 
+import Swal from 'sweetalert2'
+
 export default {
     name: 'AdminAddNewsCategory',
     components: {
@@ -66,7 +68,16 @@ export default {
             if (postNewsCategory.name) {
                 this.messageError = postNewsCategory.name[0]
             } else {
-                this.$router.push('/admstr/category-news')
+                let self = this
+
+                Swal.fire({
+                    title: 'Berhasil!',
+                    text: 'Kategori berita berhasil ditambahkan.',
+                    icon: 'success'
+
+                }).then(function () {
+                    self.$router.push('/admstr/category-news')
+                })
             }
         }
     }

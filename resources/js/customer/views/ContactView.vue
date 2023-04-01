@@ -58,7 +58,7 @@ export default {
             offices: []
         }
     },
-    created() {
+    mounted() {
         this.offices = config.office
     }
 }

@@ -11,7 +11,8 @@
                             <div class="input-group">
                                 <span class="input-group-text text-body"><i class="fas fa-search"
                                         aria-hidden="true"></i></span>
-                                <input type="text" class="form-control" placeholder="Type here...">
+                                <input type="text" class="form-control" placeholder="Type here..." v-model="search"
+                                    @keyup="onKeyupLoadDataFromServer">
                             </div>
                         </div>
                     </div>
@@ -81,13 +82,19 @@
                                                 </td>
                                                 <td class="align-middle text-center">
                                                     <span class="text-secondary text-xs font-weight-bold">
-                                                        {{ newsData.created_at }}
+                                                        {{ formatDate(newsData.created_at) }}
                                                     </span>
                                                 </td>
                                                 <td class="align-middle">
-                                                    <a href="javascript:;" class="text-secondary font-weight-bold text-xs"
+                                                    <a v-bind:href="'/admstr/detail-news/' + newsData.id"
+                                                        class="text-secondary font-weight-bold text-xs"
                                                         data-toggle="tooltip" data-original-title="Edit user">
-                                                        Edit
+                                                        Detail
+                                                    </a>
+                                                    <a href="#" class="text-secondary font-weight-bold text-xs"
+                                                        data-toggle="tooltip" data-original-title="Delete news"
+                                                        :data-id="newsData.id" @click.prevent="onClickDelete">
+                                                        Hapus
                                                     </a>
                                                 </td>
                                             </tr>
@@ -116,6 +123,8 @@ import store from '@/store'
 
 import newsServices from '../../services/news'
 
+import Swal from 'sweetalert2'
+
 export default {
     name: 'AdminNews',
     components: {
@@ -127,6 +136,7 @@ export default {
             user: store.state.auth.user,
             news: [],
             page: 1,
+            search: '',
             noResult: false,
             message: ""
         }
@@ -134,7 +144,12 @@ export default {
     methods: {
         async loadDataFromServer() {
             try {
-                const result = await newsServices.getNews(this.page)
+                const obj = {
+                    page: this.page,
+                    search: this.search
+                }
+
+                const result = await newsServices.getNews(obj)
 
                 if (result.data.length) {
                     this.news.push(...result.data);
@@ -147,6 +162,45 @@ export default {
                 this.noResult = true;
                 this.message = "Error loading data";
             }
+        },
+        async onKeyupLoadDataFromServer() {
+            try {
+                const obj = {
+                    page: 1,
+                    search: this.search
+                }
+
+                const result = await newsServices.getNews(obj)
+
+                if (result.data.length) {
+                    this.news = result.data;
+                }
+            } catch (err) {
+                this.noResult = true;
+                this.message = "Error loading data";
+            }
+        },
+        async onClickDelete(e) {
+            try {
+                let self = this
+                const id = e.target.getAttribute('data-id')
+
+                Swal.fire({
+                    title: 'Apakah anda yakin',
+                    showCancelButton: true,
+                    confirmButtonText: 'Yes'
+                }).then((result) => {
+                    if (result.isConfirmed) {
+                        Swal.fire('Data berhasil dihapus!', '', 'success').then(async function () {
+                            const deleteData = await newsServices.deleteNewsById(id, self.user.bearer)
+
+                            if (deleteData.data) {
+                                location.reload()
+                            }
+                        })
+                    }
+                })
+            } catch (err) { }
         }
     },
     async mounted() {

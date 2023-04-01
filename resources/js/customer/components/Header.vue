@@ -43,15 +43,15 @@
                         <ul>
                             <li><a href="/news">Berita</a></li>
                             <li><a href="/news-promotion">Berita Promo</a></li>
-                            <li><a href="/news-auction">Berita Lelang</a></li>
+                            <!-- <li><a href="/news-auction">Berita Lelang</a></li> -->
                         </ul>
                     </li>
-                    <li class="drop-down"><a href="">Karir</a>
+                    <!-- <li class="drop-down"><a href="">Karir</a>
                         <ul>
                             <li><a href="#">Bekerja di BMT Anfa NU</a></li>
                             <li><a href="#">Lowongan</a></li>
                         </ul>
-                    </li>
+                    </li> -->
                     <li><a href="/contact">Kontak</a></li>
                 </ul>
             </nav>
@@ -71,7 +71,7 @@ export default {
             configProduct: []
         }
     },
-    created() {
+    mounted() {
         this.configProduct = configProduct.configProduct
     }
 }
