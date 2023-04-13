@@ -1,5 +1,5 @@
+##### THIS ALLOWS US TO DEPLOY THE SITE FROM A GIT REPO ######
 ---
 deployment:
   tasks:
-    - export DEPLOYPATH=/home/public_html
-    - /usr/bin/rsync -Paz * $DEPLOYPATH --delete
+    - export DEPLOYPATH=/home/u3444603/public_html/
