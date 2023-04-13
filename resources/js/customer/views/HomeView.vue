@@ -88,7 +88,7 @@
                             </div>
                         </section>
 
-                        <!-- <section id="services" class="services">
+                        <section id="services" class="services">
                             <div class="container">
 
                                 <div class="section-title">
@@ -139,7 +139,7 @@
                                 </div>
 
                             </div>
-                        </section> -->
+                        </section>
 
                         <section v-show="news.length > 0" id="testimonials" class="testimonials">
                             <div class="container">
