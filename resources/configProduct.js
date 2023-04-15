@@ -257,6 +257,7 @@ const configProduct = [
                 id: 1,
                 name: 'Pembiayaan Modal Usaha',
                 path: 'pembiayaan-modal-usaha',
+                icon: 'bx bxs-business',
                 content: [
                     {
                         type: 'paragraph',
@@ -274,10 +275,11 @@ const configProduct = [
                 id: 2,
                 name: 'Pembiayaan Kendaraan Bermotor',
                 path: 'pembiayaan-kendaraan-bermotor',
+                icon: 'bx bx-car',
                 content: [
                     {
                         type: 'paragraph',
-                        title: 'Pembiayaan Modal Usaha',
+                        title: 'Pembiayaan Kendaraan Bermotor',
                         value: `
                             Sepeda motor dan mobil sekarang sudah menjadi kebutuhan pokok bagi masyarakat.
                             Dikarenakan dengan adanya kendaraan bermotor maka akan menunjang aktivitas
@@ -292,6 +294,7 @@ const configProduct = [
                 id: 3,
                 name: 'Pembiayaan Rumah',
                 path: 'pembiayaan-rumah',
+                icon: 'bx bx-home',
                 content: [
                     {
                         type: 'paragraph',
@@ -307,6 +310,7 @@ const configProduct = [
                 id: 4,
                 name: 'Pembiayaan Multiguna',
                 path: 'pembiayaan-multiguna',
+                icon: 'bx bxs-donate-heart',
                 content: [
                     {
                         type: 'list',
