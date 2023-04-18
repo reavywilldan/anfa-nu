@@ -102,9 +102,12 @@
                                         <div class="icon-box">
                                             <div class="icon"><i :class="product.icon"></i></div>
                                             <h4 class="title">
-                                                <a :href="'/product/pembiayaan/' + product.path + '/'">
+                                                <!-- <a :href="'/product/pembiayaan/' + product.path + '/'">
                                                     {{ product.name }}
-                                                </a>
+                                                </a> -->
+                                                <router-link :to="'/product/pembiayaan/' + product.path">
+                                                    {{ product.name }}
+                                                </router-link>
                                             </h4>
                                             <hr>
                                         </div>

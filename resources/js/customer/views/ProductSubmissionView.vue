@@ -213,8 +213,11 @@
                                         <div class="form-group col-md-6">
                                             <label for="termOfPayment">Jangka Waktu</label>
                                             <div class="input-group mb-2">
-                                                <input type="number" class="form-control" id="termOfPayment"
-                                                    v-model="termOfPayment" required>
+                                                <select class="form-control" id="termOfPayment" v-model="termOfPayment"
+                                                    required>
+                                                    <option selected disabled>Periode Pembayaran</option>
+                                                    <option v-for="item in 96" :value="item">{{ item }} bulan</option>
+                                                </select>
                                                 <div class="input-group-prepend">
                                                     <div class="input-group-text">bulan</div>
                                                 </div>
@@ -558,7 +561,7 @@ export default {
             workAddress: '',
             requestedAmount: 0,
             requestedAmountUse: '',
-            termOfPayment: 0,
+            termOfPayment: 1,
             profitSharing: '',
             submissionType: '',
             partnerName: '',

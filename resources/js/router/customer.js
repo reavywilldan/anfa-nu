@@ -35,6 +35,11 @@ const routesCustomer = [
         component: () => import(/* webpackChunkName: "contact" */ '../customer/views/ContactView.vue')
     },
     {
+        path: '/financing-calculator',
+        name: 'Kontak',
+        component: () => import(/* webpackChunkName: "contact" */ '../customer/views/FinancingCalculatorView.vue')
+    },
+    {
         path: '/news',
         name: 'Berita',
         component: () => import(/* webpackChunkName: "news" */ '../customer/views/NewsView.vue')

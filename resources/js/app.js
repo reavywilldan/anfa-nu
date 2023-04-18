@@ -27,6 +27,22 @@ Vue.mixin({
             }
 
             return ''
+        },
+        currencyNumberFormat(number) {
+            number = number || 0
+            number = Number(number)
+
+            const currency = new Intl.NumberFormat("id-ID", { style: "currency", currency: "IDR" }).format(number)
+
+            return currency
+        },
+        numberFormat(number) {
+            number = number || 0
+            number = Number(number)
+
+            number = number.toLocaleString('id')
+
+            return number
         }
     },
 })

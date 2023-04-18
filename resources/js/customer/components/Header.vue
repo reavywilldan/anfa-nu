@@ -32,6 +32,7 @@
                                     </li>
                                 </ul>
                             </li>
+                            <li><a href="/financing-calculator">Kalkulator Pembiayaan</a></li>
                         </ul>
                     </li>
                     <!-- <li class="drop-down"><a href="#services">Maal dan CSR</a>
