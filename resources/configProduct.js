@@ -268,6 +268,52 @@ const configProduct = [
                             sebuah usaha bagi mereka yang masih pemula dan ingin memulai jalan untuk
                             mendirikan usaha.
                         `
+                    },
+                    {
+                        type: 'list',
+                        title: 'Persyaratan',
+                        value: [
+                            'Mengisi formulir permohonan pembiayaan',
+                            'Menyerahkan foto copy KK',
+                            'Menyerahkan foto copy KTP suami / istri',
+                            'Menyerahkan foto copy rekening listrik',
+                            'Menyerahkan foto copy jaminan (sertifikat / BPKB dan STNK)',
+                            'Bersedia di survei',
+                            'Untuk keperluan usaha',
+                            'Menyerahkan foto copy bilyet apabila jaminan deposito'
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        title: 'Jaminan BPKB',
+                        value: [
+                            'BPKB asli',
+                            'Foto copy BPKB',
+                            'Foto copy STNK',
+                            'Gesek nomor rangka dan mesin'
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        title: 'Jaminan sertifikat',
+                        value: [
+                            'Sertifikat asli',
+                            'Foto copy sertifikat',
+                            'Foto copy setoran pajak tanah dan bangunan',
+                            'Surat kuasa apabila bukan atas nama sendiri',
+                            'Foto copy bangunan'
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        title: 'Kemudahan',
+                        value: [
+                            'Akad dengan sistem bagi hasil',
+                            'Nisbah keuntungan 50:50 atau sesuai dengan kesepakatan',
+                            'Diangsur tiap bulan',
+                            'Surat kuasa apabila bukan atas nama sendiri',
+                            'Dapat dipotong dari tabungan mudharabah'
+                        ]
                     }
                 ],
             },
@@ -287,6 +333,51 @@ const configProduct = [
                             yang berkerja sama dengan berbagai Leasing mencoba membantu mewujudkan
                             kendaraan bermotor yang bapak/ibu inginkan, baik baru maupun bekas.
                         `
+                    },
+                    {
+                        type: 'list',
+                        title: 'Persyaratan',
+                        value: [
+                            'Mengisi formulir permohonan pembiayaan',
+                            'Menyerahkan foto copy KK',
+                            'Menyerahkan foto copy KTP suami / istri',
+                            'Menyerahkan foto copy rekening listrik',
+                            'Menyerahkan foto copy jaminan (sertifikat / BPKB dan STNK)',
+                            'Bersedia di survei',
+                            'Menyerahkan foto copy bilyet apabila jaminan deposito'
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        title: 'Jaminan BPKB',
+                        value: [
+                            'BPKB asli',
+                            'Foto copy BPKB',
+                            'Foto copy STNK',
+                            'Gesek nomor rangka dan mesin'
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        title: 'Jaminan sertifikat',
+                        value: [
+                            'Sertifikat asli',
+                            'Foto copy sertifikat',
+                            'Foto copy setoran pajak tanah dan bangunan',
+                            'Surat kuasa apabila bukan atas nama sendiri',
+                            'Foto copy bangunan'
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        title: 'Kemudahan',
+                        value: [
+                            'Akad dengan sistem bagi hasil',
+                            'Nisbah keuntungan 50:50 atau sesuai dengan kesepakatan',
+                            'Diangsur tiap bulan',
+                            'Surat kuasa apabila bukan atas nama sendiri',
+                            'Dapat dipotong dari tabungan mudharabah'
+                        ]
                     }
                 ],
             },
@@ -303,6 +394,51 @@ const configProduct = [
                             Pembiayaan rumah ditujukan untuk pembiayaan pembangunan rumah baru maupun
                             renovasi rumah yang sudah dihuni agar lebih nyaman dan aman untuk ditinggali.
                         `
+                    },
+                    {
+                        type: 'list',
+                        title: 'Persyaratan',
+                        value: [
+                            'Mengisi formulir permohonan pembiayaan',
+                            'Menyerahkan foto copy KK',
+                            'Menyerahkan foto copy KTP suami / istri',
+                            'Menyerahkan foto copy rekening listrik',
+                            'Menyerahkan foto copy jaminan (sertifikat / BPKB dan STNK)',
+                            'Bersedia di survei',
+                            'Menyerahkan foto copy bilyet apabila jaminan deposito'
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        title: 'Jaminan BPKB',
+                        value: [
+                            'BPKB asli',
+                            'Foto copy BPKB',
+                            'Foto copy STNK',
+                            'Gesek nomor rangka dan mesin'
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        title: 'Jaminan sertifikat',
+                        value: [
+                            'Sertifikat asli',
+                            'Foto copy sertifikat',
+                            'Foto copy setoran pajak tanah dan bangunan',
+                            'Surat kuasa apabila bukan atas nama sendiri',
+                            'Foto copy bangunan'
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        title: 'Kemudahan',
+                        value: [
+                            'Akad dengan sistem bagi hasil',
+                            'Nisbah keuntungan 50:50 atau sesuai dengan kesepakatan',
+                            'Diangsur tiap bulan',
+                            'Surat kuasa apabila bukan atas nama sendiri',
+                            'Dapat dipotong dari tabungan mudharabah'
+                        ]
                     }
                 ],
             },
@@ -321,6 +457,51 @@ const configProduct = [
                             'Rumah Sakit'
                         ]
                     },
+                    {
+                        type: 'list',
+                        title: 'Persyaratan',
+                        value: [
+                            'Mengisi formulir permohonan pembiayaan',
+                            'Menyerahkan foto copy KK',
+                            'Menyerahkan foto copy KTP suami / istri',
+                            'Menyerahkan foto copy rekening listrik',
+                            'Menyerahkan foto copy jaminan (sertifikat / BPKB dan STNK)',
+                            'Bersedia di survei',
+                            'Menyerahkan foto copy bilyet apabila jaminan deposito'
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        title: 'Jaminan BPKB',
+                        value: [
+                            'BPKB asli',
+                            'Foto copy BPKB',
+                            'Foto copy STNK',
+                            'Gesek nomor rangka dan mesin'
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        title: 'Jaminan sertifikat',
+                        value: [
+                            'Sertifikat asli',
+                            'Foto copy sertifikat',
+                            'Foto copy setoran pajak tanah dan bangunan',
+                            'Surat kuasa apabila bukan atas nama sendiri',
+                            'Foto copy bangunan'
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        title: 'Kemudahan',
+                        value: [
+                            'Akad dengan sistem bagi hasil',
+                            'Nisbah keuntungan 50:50 atau sesuai dengan kesepakatan',
+                            'Diangsur tiap bulan',
+                            'Surat kuasa apabila bukan atas nama sendiri',
+                            'Dapat dipotong dari tabungan mudharabah'
+                        ]
+                    }
                 ],
             }
         ]
