@@ -36,7 +36,7 @@ const routesCustomer = [
     },
     {
         path: '/financing-calculator',
-        name: 'Kontak',
+        name: 'Kalkulator Pembiayaan',
         component: () => import(/* webpackChunkName: "contact" */ '../customer/views/FinancingCalculatorView.vue')
     },
     {
